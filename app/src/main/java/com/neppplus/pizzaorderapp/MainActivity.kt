@@ -30,8 +30,6 @@ class MainActivity : BaseActivity() {
 
     override fun setValues() {
         // 화면에 데이터를 표시하기 위한 코드 모음
-//        val mainTabLayout = findViewById<com.google.android.material.tabs.TabLayout>(R.id.mainTabLayout)
-//        mainTabLayout.setupWithViewPager()
 
 
         mvpa = MainViewPagerAdapter(supportFragmentManager)
@@ -39,6 +37,9 @@ class MainActivity : BaseActivity() {
         val mainViewPager = findViewById<androidx.viewpager.widget.ViewPager>(R.id.mainViewPager)
 
         mainViewPager.adapter = mvpa
+
+        val mainTabLayout = findViewById<com.google.android.material.tabs.TabLayout>(R.id.mainTabLayout)
+        mainTabLayout.setupWithViewPager(mainViewPager)
 
     }
 
