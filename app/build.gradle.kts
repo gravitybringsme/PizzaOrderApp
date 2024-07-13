@@ -7,6 +7,9 @@ android {
     namespace = "com.neppplus.pizzaorderapp"
     compileSdk = 34
 
+    viewBinding {
+        enable = true
+    }
     defaultConfig {
         applicationId = "com.neppplus.pizzaorderapp"
         minSdk = 21
@@ -43,6 +46,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.circleImageView)
+    implementation(libs.viewBinding)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
